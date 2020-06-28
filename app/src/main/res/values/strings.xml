@@ -15,4 +15,8 @@
     <string name="my_exam_tab_text_1">未完成</string>
     <string name="my_exam_tab_text_2">已完成</string>
     <string name="my_exam_tab_text_3">关注</string>
+
+    <string name="qyxx_tab_text_1">基础信息</string>
+    <string name="qyxx_tab_text_2">证书展示</string>
+
 </resources>
