@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F4F8"
+    android:fitsSystemWindows="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="20dp"
+        tools:context=".ui.notifications.NotificationsFragment">
+
+        <ImageView
+            android:id="@+id/iv_mine_top_bg"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@android:color/holo_blue_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_mine_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:layout_constraintEnd_toEndOf="@id/iv_mine_top_bg"
+            app:layout_constraintTop_toTopOf="@id/iv_mine_top_bg"
+            app:srcCompat="@drawable/ic_baseline_settings_24" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_mine_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/ll_mine_menu"
+            app:layout_constraintStart_toStartOf="@id/iv_mine_top_bg"
+            app:layout_constraintTop_toBottomOf="@id/iv_mine_setting"
+            app:srcCompat="@drawable/ic_baseline_supervised_user_circle" />
+
+        <TextView
+            android:id="@+id/tv_mine_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="111111111\n1111"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@id/iv_mine_user"
+            app:layout_constraintStart_toEndOf="@id/iv_mine_user"
+            app:layout_constraintTop_toTopOf="@id/iv_mine_user" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_mine_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/shape_mine_item_bg"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_mine_top_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_mine_top_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_dashboard_black_24dp"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="我的订单" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_dashboard_black_24dp"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="购物车" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_dashboard_black_24dp"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="下载中心" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_mine_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/shape_mine_item_bg"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_mine_menu">
+
+            <TextView
+                style="@style/TextViewMineItem"
+                android:drawableStart="@drawable/ic_dashboard_black_24dp"
+                android:text="我的收藏" />
+
+            <TextView
+                style="@style/TextViewMineItem"
+                android:drawableStart="@drawable/ic_dashboard_black_24dp"
+                android:text="我的优惠券" />
+
+
+            <TextView
+                style="@style/TextViewMineItem"
+                android:drawableStart="@drawable/ic_dashboard_black_24dp"
+                android:text="学习积分" />
+
+            <TextView
+                style="@style/TextViewMineItem"
+                android:drawableStart="@drawable/ic_dashboard_black_24dp"
+                android:text="我的应聘" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_mine_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/shape_mine_item_bg"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_mine_content">
+
+            <TextView
+                style="@style/TextViewMineItem"
+                android:drawableStart="@drawable/ic_baseline_live_help_24"
+                android:text="帮助与反馈" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#99acacac" />
+
+
+            <TextView
+                style="@style/TextViewMineItem"
+                android:drawableStart="@drawable/ic_baseline_share_24"
+                android:text="分享APP" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
