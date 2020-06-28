@@ -28,7 +28,7 @@ class SimpleStringAdapter(private val data: List<String>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SimpleViewHolder =
         SimpleViewHolder(
-            View.inflate(parent.context, R.layout.item_simple_string, null)
+            LayoutInflater.from(parent.context).inflate(R.layout.item_simple_string, parent, false)
         )
 
     inner class SimpleViewHolder(view: View) : RecyclerView.ViewHolder(view) {

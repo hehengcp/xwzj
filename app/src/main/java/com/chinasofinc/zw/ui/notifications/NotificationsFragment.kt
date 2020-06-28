@@ -5,9 +5,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.chinasofinc.zw.*
+import com.chinasofinc.zw.data.CommonState
 
 
 class NotificationsFragment : Fragment(), View.OnClickListener {
@@ -27,14 +29,20 @@ class NotificationsFragment : Fragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.findViewById<View>(R.id.iv_mine_setting).setOnClickListener(this)
-        view.findViewById<View>(R.id.tv_mine_my_study).setOnClickListener(this)
-        view.findViewById<View>(R.id.tv_mine_my_exam).setOnClickListener(this)
-        view.findViewById<View>(R.id.tv_mine_my_certificate).setOnClickListener(this)
-        view.findViewById<View>(R.id.tv_mine_my_resume).setOnClickListener(this)
-        view.findViewById<View>(R.id.tv_mine_my_concerns).setOnClickListener(this)
-        view.findViewById<View>(R.id.tv_mine_my_privacy).setOnClickListener(this)
-        setQyListener(view);
+        val llContent = view.findViewById<LinearLayout>(R.id.ll_mine_content)
+        if (CommonState.enterprise) {
+            llContent.removeAllViews()
+            View.inflate(requireContext(), R.layout.layout_enterprise, llContent)
+            setQyListener(view);
+        } else {
+            view.findViewById<View>(R.id.iv_mine_setting)?.setOnClickListener(this)
+            view.findViewById<View>(R.id.tv_mine_my_study)?.setOnClickListener(this)
+            view.findViewById<View>(R.id.tv_mine_my_exam)?.setOnClickListener(this)
+            view.findViewById<View>(R.id.tv_mine_my_certificate)?.setOnClickListener(this)
+            view.findViewById<View>(R.id.tv_mine_my_resume)?.setOnClickListener(this)
+            view.findViewById<View>(R.id.tv_mine_my_concerns)?.setOnClickListener(this)
+            view.findViewById<View>(R.id.tv_mine_my_privacy)?.setOnClickListener(this)
+        }
     }
 
     override fun onClick(p0: View?) {
@@ -55,7 +63,8 @@ class NotificationsFragment : Fragment(), View.OnClickListener {
             )
         }
     }
-    fun setQyListener(view: View){
+
+    fun setQyListener(view: View) {
         view.findViewById<View>(R.id.tv_mine_qyxx).setOnClickListener {
             startActivity(
                 Intent(

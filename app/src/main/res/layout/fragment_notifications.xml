@@ -116,8 +116,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ll_mine_menu">
 
-            <include layout="@layout/layout_enterprise"/>
-
             <TextView
                 style="@style/TextViewMineItem"
                 android:drawableStart="@drawable/ic_dashboard_black_24dp"
