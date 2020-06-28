@@ -1,4 +1,4 @@
-package com.chinasofinc.zw.ui.EnterpriseInformation
+package com.chinasofinc.zw.ui.product
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,13 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.chinasofinc.zw.R
+import com.chinasofinc.zw.ui.adapter.ProductAdapter
 import com.chinasofinc.zw.ui.main.PageViewModel
 
 /**
  * A placeholder fragment containing a simple view.
  */
-class BasicInformationFragment : Fragment() {
+class SalesFragment : Fragment() {
 
     private lateinit var pageViewModel: PageViewModel
 
@@ -28,8 +31,20 @@ class BasicInformationFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val root = inflater.inflate(R.layout.fragment_basic_information, container, false)
+        val root = inflater.inflate(R.layout.fragment_certificate, container, false)
+        var recyclerView = root.findViewById<RecyclerView>(R.id.recycleview)
+        recyclerView.layoutManager = GridLayoutManager(activity,2)
+        recyclerView.adapter = ProductAdapter(setData(),activity);
         return root
+    }
+
+    fun setData(): MutableList<String> {
+        var productList: MutableList<String> = ArrayList()
+        productList.add("")
+        productList.add("")
+        productList.add("")
+        productList.add("")
+        return productList;
     }
 
     companion object {
@@ -45,8 +60,8 @@ class BasicInformationFragment : Fragment() {
          * number.
          */
         @JvmStatic
-        fun newInstance(sectionNumber: Int, sectionText: String): BasicInformationFragment {
-            return BasicInformationFragment().apply {
+        fun newInstance(sectionNumber: Int, sectionText: String): SalesFragment {
+            return SalesFragment().apply {
                 arguments = Bundle().apply {
                     putInt(ARG_SECTION_NUMBER, sectionNumber)
                     putString(ARG_SECTION_TEXT, sectionText)

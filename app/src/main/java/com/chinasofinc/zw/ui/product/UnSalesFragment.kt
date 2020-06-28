@@ -1,9 +1,10 @@
-package com.chinasofinc.zw.ui.EnterpriseInformation
+package com.chinasofinc.zw.ui.product
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.chinasofinc.zw.R
@@ -12,7 +13,7 @@ import com.chinasofinc.zw.ui.main.PageViewModel
 /**
  * A placeholder fragment containing a simple view.
  */
-class BasicInformationFragment : Fragment() {
+class UnSalesFragment : Fragment() {
 
     private lateinit var pageViewModel: PageViewModel
 
@@ -28,7 +29,8 @@ class BasicInformationFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val root = inflater.inflate(R.layout.fragment_basic_information, container, false)
+        val root = inflater.inflate(R.layout.fragment_account_settings, container, false)
+        root.findViewById<TextView>(R.id.section_label).setText("无")
         return root
     }
 
@@ -45,8 +47,8 @@ class BasicInformationFragment : Fragment() {
          * number.
          */
         @JvmStatic
-        fun newInstance(sectionNumber: Int, sectionText: String): BasicInformationFragment {
-            return BasicInformationFragment().apply {
+        fun newInstance(sectionNumber: Int, sectionText: String): UnSalesFragment {
+            return UnSalesFragment().apply {
                 arguments = Bundle().apply {
                     putInt(ARG_SECTION_NUMBER, sectionNumber)
                     putString(ARG_SECTION_TEXT, sectionText)

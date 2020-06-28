@@ -14,8 +14,7 @@
         <activity android:name=".MyPrivacyActivity"/>
         <activity android:name=".MyResumeActivity"/>
         <activity android:name=".MyExamActivity"/>
-        <activity android:name=".EnterpriseInformationActivity" />
-        
+
         <activity
             android:name=".AccountSettingsActivity"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -29,6 +28,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CourseSupplyActivity" />
+        <activity android:name=".CourseRequirementsActivity" />
+        <activity android:name=".EnterpriseInformationActivity" />
+        <activity android:name=".TalentDemandActivity" />
+        <activity android:name=".ProductActivity" />
+        <activity android:name=".RecruitmentActivity" />
     </application>
 
 </manifest>

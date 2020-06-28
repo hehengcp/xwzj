@@ -1,4 +1,4 @@
-package com.chinasofinc.zw.ui.EnterpriseInformation
+package com.chinasofinc.zw.ui.product
 
 import android.content.Context
 import androidx.fragment.app.Fragment
@@ -9,7 +9,7 @@ import androidx.fragment.app.FragmentPagerAdapter
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
  * one of the sections/tabs/pages.
  */
-class EnterpriseInformationPagerAdapter(
+class RecruitmentPagerAdapter(
     private val context: Context,
     private val tabs: Array<Int>,
     fm: FragmentManager
@@ -19,11 +19,7 @@ class EnterpriseInformationPagerAdapter(
     override fun getItem(position: Int): Fragment {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
-        if (position == 0) {
-            return BasicInformationFragment.newInstance(position,context.resources.getString(tabs[position]))
-        }else{
-            return CertificateFragment.newInstance(position,context.resources.getString(tabs[position]))
-        }
+        return RecruitmentFragment.newInstance(position,context.resources.getString(tabs[position]))
     }
 
     override fun getPageTitle(position: Int): CharSequence? {

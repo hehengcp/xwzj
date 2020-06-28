@@ -6,26 +6,26 @@ import androidx.viewpager.widget.ViewPager
 import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.widget.TextView
-import com.chinasofinc.zw.ui.EnterpriseInformation.EnterpriseInformationPagerAdapter
+import com.chinasofinc.zw.ui.product.RecruitmentPagerAdapter
 
-class EnterpriseInformationActivity : AppCompatActivity() {
+class RecruitmentActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_tab_page)
-        val sectionsPagerAdapter = EnterpriseInformationPagerAdapter(this, getTabIds(), supportFragmentManager)
+        val sectionsPagerAdapter = RecruitmentPagerAdapter(this, getTabIds(), supportFragmentManager)
         val viewPager: ViewPager = findViewById(R.id.view_pager)
         viewPager.adapter = sectionsPagerAdapter
         val tabs: TabLayout = findViewById(R.id.tabs)
         tabs.setupWithViewPager(viewPager)
-        findViewById<TextView>(R.id.tv_title).text = "企业信息"
+        tabs.visibility = View.GONE;
+        findViewById<TextView>(R.id.tv_title).text = "招聘信息"
         findViewById<View>(R.id.img_back).setOnClickListener {
             onBackPressed()
         }
     }
 
     fun getTabIds(): Array<Int> = arrayOf(
-        R.string.qyxx_tab_text_1,
-        R.string.qyxx_tab_text_2
+        R.string.zpxx
     )
 }
