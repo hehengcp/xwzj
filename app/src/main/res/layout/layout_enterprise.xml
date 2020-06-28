@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_mine_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_mine_qyxx"
+        style="@style/TextViewMineItem"
+        android:drawableStart="@drawable/ic_dashboard_black_24dp"
+        android:text="企业信息" />
+
+    <TextView
+        android:id="@+id/tv_mine_cpzx"
+        style="@style/TextViewMineItem"
+        android:drawableStart="@drawable/ic_dashboard_black_24dp"
+        android:text="产品中心" />
+
+
+    <TextView
+        android:id="@+id/tv_mine_zpxx"
+        style="@style/TextViewMineItem"
+        android:drawableStart="@drawable/ic_dashboard_black_24dp"
+        android:text="招聘信息" />
+
+    <TextView
+        android:id="@+id/tv_mine_kcgys"
+        style="@style/TextViewMineItem"
+        android:drawableStart="@drawable/ic_dashboard_black_24dp"
+        android:text="课程供应商" />
+
+    <TextView
+        android:id="@+id/tv_mine_kcxqs"
+        style="@style/TextViewMineItem"
+        android:drawableStart="@drawable/ic_dashboard_black_24dp"
+        android:text="课程需求商" />
+
+    <TextView
+        android:id="@+id/tv_mine_rcxqs"
+        style="@style/TextViewMineItem"
+        android:drawableStart="@drawable/ic_dashboard_black_24dp"
+        android:text="人才需求商" />
+
+
+</LinearLayout>
