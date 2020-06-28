@@ -5,15 +5,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.chinasofinc.zw.AccountSettingsActivity
-import com.chinasofinc.zw.MyStudyActivity
-import com.chinasofinc.zw.R
+import com.chinasofinc.zw.*
 
-class NotificationsFragment : Fragment() {
+
+class NotificationsFragment : Fragment(), View.OnClickListener {
 
     private lateinit var notificationsViewModel: NotificationsViewModel
 
@@ -30,20 +27,29 @@ class NotificationsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        view.findViewById<View>(R.id.iv_mine_setting).setOnClickListener(this)
+        view.findViewById<View>(R.id.tv_mine_my_study).setOnClickListener(this)
+        view.findViewById<View>(R.id.tv_mine_my_exam).setOnClickListener(this)
+        view.findViewById<View>(R.id.tv_mine_my_certificate).setOnClickListener(this)
+        view.findViewById<View>(R.id.tv_mine_my_resume).setOnClickListener(this)
+        view.findViewById<View>(R.id.tv_mine_my_concerns).setOnClickListener(this)
+        view.findViewById<View>(R.id.tv_mine_my_privacy).setOnClickListener(this)
+    }
 
-        view.findViewById<View>(R.id.iv_mine_setting).setOnClickListener {
+    override fun onClick(p0: View?) {
+        when (p0?.id) {
+            R.id.iv_mine_setting -> AccountSettingsActivity::class.java
+            R.id.tv_mine_my_study -> MyStudyActivity::class.java
+            R.id.tv_mine_my_exam -> MyExamActivity::class.java
+            R.id.tv_mine_my_certificate -> MyCertificateActivity::class.java
+            R.id.tv_mine_my_resume -> MyResumeActivity::class.java
+            R.id.tv_mine_my_concerns -> MyConcernsActivity::class.java
+            R.id.tv_mine_my_privacy -> MyPrivacyActivity::class.java
+            else -> null
+        }?.run {
             startActivity(
                 Intent(
-                    requireContext(),
-                    AccountSettingsActivity::class.java
-                )
-            )
-        }
-        view.findViewById<View>(R.id.tv_mine_my_study).setOnClickListener {
-            startActivity(
-                Intent(
-                    requireContext(),
-                    MyStudyActivity::class.java
+                    requireContext(), this
                 )
             )
         }

@@ -12,4 +12,7 @@
     <string name="my_study_tab_text_2">正在学习</string>
     <string name="my_study_tab_text_3">待学习</string>
     <string name="my_study_tab_text_4">完成学习</string>
+    <string name="my_exam_tab_text_1">未完成</string>
+    <string name="my_exam_tab_text_2">已完成</string>
+    <string name="my_exam_tab_text_3">关注</string>
 </resources>
