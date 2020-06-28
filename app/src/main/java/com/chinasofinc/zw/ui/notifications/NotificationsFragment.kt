@@ -77,7 +77,7 @@ class NotificationsFragment : Fragment(), View.OnClickListener {
             startActivity(
                 Intent(
                     requireContext(),
-                    MyStudyActivity::class.java
+                    ProductActivity::class.java
                 )
             )
         }
@@ -85,7 +85,7 @@ class NotificationsFragment : Fragment(), View.OnClickListener {
             startActivity(
                 Intent(
                     requireContext(),
-                    MyStudyActivity::class.java
+                    RecruitmentActivity::class.java
                 )
             )
         }
@@ -93,7 +93,7 @@ class NotificationsFragment : Fragment(), View.OnClickListener {
             startActivity(
                 Intent(
                     requireContext(),
-                    MyStudyActivity::class.java
+                    CourseSupplyActivity::class.java
                 )
             )
         }
@@ -101,7 +101,7 @@ class NotificationsFragment : Fragment(), View.OnClickListener {
             startActivity(
                 Intent(
                     requireContext(),
-                    MyStudyActivity::class.java
+                    CourseRequirementsActivity::class.java
                 )
             )
         }
@@ -109,7 +109,7 @@ class NotificationsFragment : Fragment(), View.OnClickListener {
             startActivity(
                 Intent(
                     requireContext(),
-                    MyStudyActivity::class.java
+                    TalentDemandActivity::class.java
                 )
             )
         }

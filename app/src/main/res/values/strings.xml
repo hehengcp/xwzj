@@ -16,8 +16,27 @@
     <string name="my_exam_tab_text_2">已完成</string>
     <string name="my_exam_tab_text_3">关注</string>
 
+    <string name="zpxx">招聘信息</string>
+
     <string name="qyxx_tab_text_1">基础信息</string>
     <string name="qyxx_tab_text_2">证书展示</string>
+    <string name="cpzx_tab_text_1">售卖中</string>
+    <string name="cpzx_tab_text_2">已下架</string>
+
+    <string name="kcgy_tab_text_1">申请入驻</string>
+    <string name="kcgy_tab_text_2">课程管理</string>
+    <string name="kcgy_tab_text_3">直播管理</string>
+    <string name="kcgy_tab_text_4">课程统计</string>
+
+    <string name="kcxq_tab_text_1">申请入驻</string>
+    <string name="kcxq_tab_text_2">学员管理</string>
+    <string name="kcxq_tab_text_3">课程管理</string>
+    <string name="kcxq_tab_text_4">数据统计</string>
+
+    <string name="rcxq_tab_text_1">申请入驻</string>
+    <string name="rcxq_tab_text_2">招聘管理</string>
+    <string name="rcxq_tab_text_3">简历管理</string>
+    <string name="rcxq_tab_text_4">数据统计</string>
 
     <string name="home_tab_text_1">精选推荐</string>
     <string name="home_tab_text_2">专业课程</string>
