@@ -145,27 +145,32 @@
                 android:text="我的学习" />
 
             <TextView
+                android:id="@+id/tv_mine_my_exam"
                 style="@style/TextViewMineItem"
                 android:drawableStart="@drawable/ic_dashboard_black_24dp"
                 android:text="我的考试" />
 
             <TextView
+                android:id="@+id/tv_mine_my_certificate"
                 style="@style/TextViewMineItem"
                 android:drawableStart="@drawable/ic_dashboard_black_24dp"
                 android:text="我的证书" />
 
             <TextView
+                android:id="@+id/tv_mine_my_resume"
                 style="@style/TextViewMineItem"
                 android:drawableStart="@drawable/ic_dashboard_black_24dp"
                 android:text="我的简历" />
 
 
             <TextView
+                android:id="@+id/tv_mine_my_concerns"
                 style="@style/TextViewMineItem"
                 android:drawableStart="@drawable/ic_dashboard_black_24dp"
                 android:text="我的关注" />
 
             <TextView
+                android:id="@+id/tv_mine_my_privacy"
                 style="@style/TextViewMineItem"
                 android:drawableStart="@drawable/ic_dashboard_black_24dp"
                 android:text="我的隐私" />

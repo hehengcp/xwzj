@@ -9,10 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".MyCertificateActivity"/>
+        <activity android:name=".MyConcernsActivity"/>
+        <activity android:name=".MyPrivacyActivity"/>
+        <activity android:name=".MyResumeActivity"/>
+        <activity android:name=".MyExamActivity"/>
         <activity
             android:name=".AccountSettingsActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".MyStudyActivity"
             android:theme="@style/AppTheme.NoActionBar" />
