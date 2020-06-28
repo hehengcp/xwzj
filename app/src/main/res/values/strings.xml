@@ -3,4 +3,13 @@
     <string name="title_home">首页</string>
     <string name="title_dashboard">制定学习</string>
     <string name="title_notifications">我的</string>
+    <string name="title_activity_account_settings">AccountSettingsActivity</string>
+    <string name="setting_tab_text_1">个人信息</string>
+    <string name="setting_tab_text_2">收货地址</string>
+    <string name="setting_tab_text_3">增票设置</string>
+    <string name="setting_tab_text_4">安全设置</string>
+    <string name="my_study_tab_text_1">全部课程</string>
+    <string name="my_study_tab_text_2">正在学习</string>
+    <string name="my_study_tab_text_3">待学习</string>
+    <string name="my_study_tab_text_4">完成学习</string>
 </resources>

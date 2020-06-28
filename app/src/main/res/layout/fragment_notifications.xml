@@ -48,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text="111111111\n1111"
+            android:text="海尔兄弟\n0 课程数"
             android:textColor="@android:color/white"
             app:layout_constraintBottom_toBottomOf="@id/iv_mine_user"
             app:layout_constraintStart_toEndOf="@id/iv_mine_user"
@@ -136,6 +136,39 @@
                 style="@style/TextViewMineItem"
                 android:drawableStart="@drawable/ic_dashboard_black_24dp"
                 android:text="我的应聘" />
+
+
+            <TextView
+                android:id="@+id/tv_mine_my_study"
+                style="@style/TextViewMineItem"
+                android:drawableStart="@drawable/ic_dashboard_black_24dp"
+                android:text="我的学习" />
+
+            <TextView
+                style="@style/TextViewMineItem"
+                android:drawableStart="@drawable/ic_dashboard_black_24dp"
+                android:text="我的考试" />
+
+            <TextView
+                style="@style/TextViewMineItem"
+                android:drawableStart="@drawable/ic_dashboard_black_24dp"
+                android:text="我的证书" />
+
+            <TextView
+                style="@style/TextViewMineItem"
+                android:drawableStart="@drawable/ic_dashboard_black_24dp"
+                android:text="我的简历" />
+
+
+            <TextView
+                style="@style/TextViewMineItem"
+                android:drawableStart="@drawable/ic_dashboard_black_24dp"
+                android:text="我的关注" />
+
+            <TextView
+                style="@style/TextViewMineItem"
+                android:drawableStart="@drawable/ic_dashboard_black_24dp"
+                android:text="我的隐私" />
 
 
         </LinearLayout>
