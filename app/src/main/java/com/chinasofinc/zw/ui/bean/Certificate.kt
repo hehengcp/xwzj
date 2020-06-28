@@ -15,5 +15,10 @@ package com.chinasofinc.zw.ui.bean
  */
 class Certificate {
 
-    val name:String = "";
+    var name:String = "";
+    var industry:String = "";
+    var field:String = "";
+    var level:String = "";
+    var describe:String = "";
+
 }

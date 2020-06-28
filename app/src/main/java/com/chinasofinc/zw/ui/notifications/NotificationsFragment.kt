@@ -34,6 +34,7 @@ class NotificationsFragment : Fragment(), View.OnClickListener {
         view.findViewById<View>(R.id.tv_mine_my_resume).setOnClickListener(this)
         view.findViewById<View>(R.id.tv_mine_my_concerns).setOnClickListener(this)
         view.findViewById<View>(R.id.tv_mine_my_privacy).setOnClickListener(this)
+        setQyListener(view);
     }
 
     override fun onClick(p0: View?) {
@@ -50,6 +51,56 @@ class NotificationsFragment : Fragment(), View.OnClickListener {
             startActivity(
                 Intent(
                     requireContext(), this
+                )
+            )
+        }
+    }
+    fun setQyListener(view: View){
+        view.findViewById<View>(R.id.tv_mine_qyxx).setOnClickListener {
+            startActivity(
+                Intent(
+                    requireContext(),
+                    EnterpriseInformationActivity::class.java
+                )
+            )
+        }
+        view.findViewById<View>(R.id.tv_mine_cpzx).setOnClickListener {
+            startActivity(
+                Intent(
+                    requireContext(),
+                    MyStudyActivity::class.java
+                )
+            )
+        }
+        view.findViewById<View>(R.id.tv_mine_zpxx).setOnClickListener {
+            startActivity(
+                Intent(
+                    requireContext(),
+                    MyStudyActivity::class.java
+                )
+            )
+        }
+        view.findViewById<View>(R.id.tv_mine_kcgys).setOnClickListener {
+            startActivity(
+                Intent(
+                    requireContext(),
+                    MyStudyActivity::class.java
+                )
+            )
+        }
+        view.findViewById<View>(R.id.tv_mine_kcxqs).setOnClickListener {
+            startActivity(
+                Intent(
+                    requireContext(),
+                    MyStudyActivity::class.java
+                )
+            )
+        }
+        view.findViewById<View>(R.id.tv_mine_rcxqs).setOnClickListener {
+            startActivity(
+                Intent(
+                    requireContext(),
+                    MyStudyActivity::class.java
                 )
             )
         }
