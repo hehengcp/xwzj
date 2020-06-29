@@ -16,7 +16,7 @@
             android:gravity="center_vertical"
             android:paddingLeft="18dp"
             android:text="企业工商信息"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -90,7 +90,7 @@
             android:gravity="center_vertical"
             android:paddingLeft="18dp"
             android:text="企业介绍"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constraintLeft_toLeftOf="parent"/>
         <TextView
             android:id="@+id/tv_gswz_title"
@@ -142,7 +142,7 @@
             android:gravity="center_vertical"
             android:paddingLeft="18dp"
             android:text="联系我们"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constraintLeft_toLeftOf="parent"/>
         <TextView
             android:id="@+id/tv_lxr_title"
