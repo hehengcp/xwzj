@@ -18,7 +18,9 @@ class MyPrivacyActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_privacy)
         findViewById<TextView>(R.id.tv_title).text = "我的隐私"
-
+        findViewById<View>(R.id.img_back).setOnClickListener {
+            onBackPressed()
+        }
         findViewById<Switch>(R.id.sw_privacy_top).setOnCheckedChangeListener { compoundButton, b: Boolean ->
             findViewById<androidx.constraintlayout.widget.Group>(R.id.gp_privacy).visibility =
                 if (b) View.VISIBLE else View.GONE

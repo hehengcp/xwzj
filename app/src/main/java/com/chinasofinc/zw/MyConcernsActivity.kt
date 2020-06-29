@@ -2,6 +2,7 @@ package com.chinasofinc.zw
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.SimpleAdapter
 import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
@@ -20,7 +21,9 @@ class MyConcernsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_concerns)
         findViewById<TextView>(R.id.tv_title).text = "我的关注"
-
+        findViewById<View>(R.id.img_back).setOnClickListener {
+            onBackPressed()
+        }
         findViewById<RecyclerView>(R.id.rv_concerns_content).apply {
             layoutManager = LinearLayoutManager(context)
             adapter = SimpleStringAdapter(TEXTS)

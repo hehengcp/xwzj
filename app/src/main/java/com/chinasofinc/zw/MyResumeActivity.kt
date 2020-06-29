@@ -2,6 +2,7 @@ package com.chinasofinc.zw
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -61,7 +62,9 @@ class MyResumeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_resume)
         findViewById<TextView>(R.id.tv_title).text = "我的简历"
-
+        findViewById<View>(R.id.img_back).setOnClickListener {
+            onBackPressed()
+        }
         findViewById<RecyclerView>(R.id.rv_resume_content).apply {
             layoutManager = LinearLayoutManager(context)
             adapter = ResumeListAdapter(RESUME_ITEM)
