@@ -45,13 +45,13 @@ class RecruitmentAdapter(
     }
 
     override fun onBindViewHolder(holder: CertificateViewHolder, position: Int) {
-        holder.findView<TextView>(R.id.tv_rs).setText("人数："+items[position].peopleNumber);
-        holder.findView<TextView>(R.id.tv_gzdd).setText("工作地点："+items[position].worklace);
-        holder.findView<TextView>(R.id.tv_gw).setText("岗位："+items[position].jobs);
-        holder.findView<TextView>(R.id.tv_xz).setText("薪资："+items[position].salary);
-        holder.findView<TextView>(R.id.tv_fbsj).setText("发布时间："+items[position].time);
-        holder.findView<TextView>(R.id.tv_xl).setText("学历："+items[position].educationBackground);
-        holder.findView<TextView>(R.id.tv_ly).setText("状态："+items[position].status);
+        holder.findView<TextView>(R.id.tv_rs).setText(items[position].peopleNumber+"人");
+        holder.findView<TextView>(R.id.tv_gzdd).setText(items[position].worklace);
+        holder.findView<TextView>(R.id.tv_gw).setText(items[position].jobs);
+        holder.findView<TextView>(R.id.tv_xz).setText(items[position].salary);
+        holder.findView<TextView>(R.id.tv_fbsj).setText(items[position].time);
+        holder.findView<TextView>(R.id.tv_xl).setText(items[position].educationBackground);
+        holder.findView<TextView>(R.id.tv_ly).setText(items[position].status);
     }
 
 }
