@@ -14,6 +14,7 @@
         <activity android:name=".MyPrivacyActivity"/>
         <activity android:name=".MyResumeActivity"/>
         <activity android:name=".MyExamActivity"/>
+        <activity android:name=".CommonActivity"/>
 
         <activity
             android:name=".AccountSettingsActivity"

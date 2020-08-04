@@ -35,7 +35,7 @@
                 android:padding="@dimen/appbar_padding"
                 android:text="账号设置"
                 android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
-                android:textColor="@android:color/black" />
+                android:textColor="@color/black_1c" />
         </FrameLayout>
 
         <com.google.android.material.tabs.TabLayout
@@ -43,12 +43,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:tabGravity="fill"
-            app:tabIndicatorColor="@android:color/holo_blue_dark"
+            app:tabIndicatorColor="@color/blue_3e"
             app:tabIndicatorFullWidth="false"
             app:tabIndicatorGravity="bottom"
-            app:tabIndicatorHeight="2dp"
+            app:tabIndicator="@drawable/shape_home_tab"
             app:tabMode="fixed"
-            app:tabSelectedTextColor="@android:color/holo_blue_dark"
+            app:tabSelectedTextColor="@color/blue_3e"
             app:tabTextColor="@android:color/darker_gray"
             app:theme="@style/Widget.Design.TabLayout" />
 

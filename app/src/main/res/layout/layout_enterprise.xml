@@ -6,38 +6,38 @@
     <TextView
         android:id="@+id/tv_mine_qyxx"
         style="@style/TextViewMineItem"
-        android:drawableStart="@drawable/ic_dashboard_black_24dp"
+        android:drawableStart="@drawable/ic_my_qyxx"
         android:text="企业信息" />
 
     <TextView
         android:id="@+id/tv_mine_cpzx"
         style="@style/TextViewMineItem"
-        android:drawableStart="@drawable/ic_dashboard_black_24dp"
+        android:drawableStart="@drawable/ic_my_cpzx"
         android:text="产品中心" />
 
 
     <TextView
         android:id="@+id/tv_mine_zpxx"
         style="@style/TextViewMineItem"
-        android:drawableStart="@drawable/ic_dashboard_black_24dp"
+        android:drawableStart="@drawable/ic_my_zpxx"
         android:text="招聘信息" />
 
     <TextView
         android:id="@+id/tv_mine_kcgys"
         style="@style/TextViewMineItem"
-        android:drawableStart="@drawable/ic_dashboard_black_24dp"
+        android:drawableStart="@drawable/ic_kcqys"
         android:text="课程供应商" />
 
     <TextView
         android:id="@+id/tv_mine_kcxqs"
         style="@style/TextViewMineItem"
-        android:drawableStart="@drawable/ic_dashboard_black_24dp"
+        android:drawableStart="@drawable/ic_kcxqs"
         android:text="课程需求商" />
 
     <TextView
         android:id="@+id/tv_mine_rcxqs"
         style="@style/TextViewMineItem"
-        android:drawableStart="@drawable/ic_dashboard_black_24dp"
+        android:drawableStart="@drawable/ic_rcxqs"
         android:text="人才需求商" />
 
 

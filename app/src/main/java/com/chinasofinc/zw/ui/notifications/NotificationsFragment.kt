@@ -6,10 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.core.view.forEach
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.chinasofinc.zw.*
 import com.chinasofinc.zw.data.CommonState
+import org.w3c.dom.Text
 
 
 class NotificationsFragment : Fragment(), View.OnClickListener {
@@ -30,19 +33,20 @@ class NotificationsFragment : Fragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val llContent = view.findViewById<LinearLayout>(R.id.ll_mine_content)
+        view.findViewById<View>(R.id.iv_mine_setting).apply {
+            visibility = if (CommonState.enterprise) View.GONE else View.VISIBLE
+        }.setOnClickListener(this)
         if (CommonState.enterprise) {
             llContent.removeAllViews()
             View.inflate(requireContext(), R.layout.layout_enterprise, llContent)
             setQyListener(view);
         } else {
-            view.findViewById<View>(R.id.iv_mine_setting)?.setOnClickListener(this)
-            view.findViewById<View>(R.id.tv_mine_my_study)?.setOnClickListener(this)
-            view.findViewById<View>(R.id.tv_mine_my_exam)?.setOnClickListener(this)
-            view.findViewById<View>(R.id.tv_mine_my_certificate)?.setOnClickListener(this)
-            view.findViewById<View>(R.id.tv_mine_my_resume)?.setOnClickListener(this)
-            view.findViewById<View>(R.id.tv_mine_my_concerns)?.setOnClickListener(this)
-            view.findViewById<View>(R.id.tv_mine_my_privacy)?.setOnClickListener(this)
+            llContent.forEach {
+                it.setOnClickListener(this)
+            }
         }
+        view.findViewById<LinearLayout>(R.id.ll_mine_bottom).forEach { it.setOnClickListener(this) }
+        view.findViewById<LinearLayout>(R.id.ll_mine_menu).forEach { it.setOnClickListener(this) }
     }
 
     override fun onClick(p0: View?) {
@@ -54,7 +58,12 @@ class NotificationsFragment : Fragment(), View.OnClickListener {
             R.id.tv_mine_my_resume -> MyResumeActivity::class.java
             R.id.tv_mine_my_concerns -> MyConcernsActivity::class.java
             R.id.tv_mine_my_privacy -> MyPrivacyActivity::class.java
-            else -> null
+            else -> {
+                if (p0 is TextView) {
+                    CommonActivity.start(requireContext(), p0.text)
+                }
+                null
+            }
         }?.run {
             startActivity(
                 Intent(

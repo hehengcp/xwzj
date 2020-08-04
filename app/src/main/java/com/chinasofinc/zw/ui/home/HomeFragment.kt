@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.viewpager.widget.ViewPager
+import com.chinasofinc.zw.CommonActivity
 import com.chinasofinc.zw.R
 import com.chinasofinc.zw.data.CommonState
 import com.chinasofinc.zw.ui.main.SectionsPagerAdapter
@@ -42,6 +43,9 @@ class HomeFragment : Fragment() {
         viewPager.adapter = sectionsPagerAdapter
         val tabs: TabLayout = root.findViewById(R.id.tabs)
         tabs.setupWithViewPager(viewPager)
+        root.findViewById<View>(R.id.sw_home_search).setOnClickListener {
+            CommonActivity.start(requireContext(), "课程搜索")
+        }
         return root
     }
 

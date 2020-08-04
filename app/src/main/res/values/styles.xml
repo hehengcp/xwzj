@@ -18,7 +18,9 @@
         <item name="android:drawablePadding">10dp</item>
         <item name="android:gravity">center_vertical</item>
     </style>
-
+    <style name="TextViewMineItem.Icon">
+        <item name="android:paddingStart">12dp</item>
+    </style>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
